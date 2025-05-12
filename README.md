@@ -37,7 +37,7 @@ Behavioral Patterns are concerned with algorithms and the assignment of responsi
 - **Visitor**: Separates algorithms from the objects on which they operate
 
 ### Other Design Pattern:
-- **Dependencies Injection**: A technique which makes the interactions between objects as minimal as possible through specific dependencies
+- **Dependency Injection**: Provide the dependencies of an object externally rather than created internally by the object itself
 
 ## SOLID
 The SOLID principles are a set of guidelines for writing high-quality, maintainable, and scalable software.

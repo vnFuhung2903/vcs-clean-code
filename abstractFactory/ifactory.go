@@ -1,15 +1,11 @@
 package abstractFactory
 
 type IFactory interface {
-	Produce() ICar
+	GetName() string
 }
 
 func NewFactory(name string) IFactory {
-	if name == "mercedes" {
-		return &Mercedes{}
+	return &Factory{
+		name,
 	}
-	if name == "nissan" {
-		return &Nissan{}
-	}
-	return nil
 }

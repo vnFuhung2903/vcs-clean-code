@@ -1,6 +1,6 @@
 package proxy
 
-import "net/mail"
+import "math/rand"
 
 type Proxy struct {
 	app *App
@@ -12,10 +12,10 @@ func NewProxy() *Proxy {
 	}
 }
 
-func (p *Proxy) Handle(url string, email string) uint {
-	_, err := mail.ParseAddress(email)
-	if err != nil {
-		return 403
+func (p *Proxy) SendMessage() string {
+	rand := rand.Int()
+	if rand%2 == 0 {
+		return "Message from proxy itself"
 	}
-	return p.app.Handle(url)
+	return p.app.SendMessage()
 }
